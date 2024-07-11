@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20240629 23:49:51.932" rpa="false" schemaversion="4">
+<suite id="s1" name="Buscarimoveis" source="D:\problemaTecnicoZapImoveis\tests\buscarimoveis.robot">
+<test id="s1-t1" name="CT01 - Buscar Imóveis - Cenário Positivo" line="11">
+<kw name="Acesso a home page do site www.zapimoveis.com.br" library="setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240629 23:49:52.179" level="INFO">Opening browser 'chrome' to base url 'https://www.zapimoveis.com.br/'.</msg>
+<status status="PASS" starttime="20240629 23:49:52.179" endtime="20240629 23:49:55.897"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240629 23:49:55.897" endtime="20240629 23:49:56.186"/>
+</kw>
+<status status="PASS" starttime="20240629 23:49:52.178" endtime="20240629 23:49:56.187"/>
+</kw>
+<kw name="Dado que estou na página inicial do portal ZAP imóveis" library="buscarImoveis">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HOME}</arg>
+<arg>A casa que você quer está aqui.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240629 23:49:56.248" level="INFO">Element '//*[@id="__next"]/main/section[1]/section/div/main/div/div[1]/h1' contains text 'A casa que você quer está aqui.'.</msg>
+<status status="PASS" starttime="20240629 23:49:56.214" endtime="20240629 23:49:56.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTNENTENDI}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:56.249" level="INFO">Clicking element '//button[@class='cookie-notifier__cta'][contains(.,'Entendi')]'.</msg>
+<status status="PASS" starttime="20240629 23:49:56.249" endtime="20240629 23:49:56.316"/>
+</kw>
+<status status="PASS" starttime="20240629 23:49:56.214" endtime="20240629 23:49:56.316"/>
+</kw>
+<kw name="Quando pesquiso uma cobertura para alugar na cidade de São Paulo" library="buscarImoveis">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ALUGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:56.317" level="INFO">Clicking element '//button[@type='button'][contains(.,'Alugar')]'.</msg>
+<status status="PASS" starttime="20240629 23:49:56.317" endtime="20240629 23:49:56.378"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ALUGAR}</arg>
+<arg>Alugar</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20240629 23:49:56.411" level="INFO">Element '//button[@type='button'][contains(.,'Alugar')]' contains text 'Alugar'.</msg>
+<status status="PASS" starttime="20240629 23:49:56.378" endtime="20240629 23:49:56.411"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOCAL}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240629 23:49:56.411" endtime="20240629 23:49:56.439"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCAL}</arg>
+<arg>São Paulo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:56.440" level="INFO">Typing text 'São Paulo' into text field '//input[@placeholder='Digite o nome da rua, bairro ou cidade']'.</msg>
+<status status="PASS" starttime="20240629 23:49:56.439" endtime="20240629 23:49:56.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240629 23:49:56.561" endtime="20240629 23:49:58.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:58.294" level="INFO">Clicking element '//input[@value='BR-Sao_Paulo-NULL-Sao_Paulo']'.</msg>
+<status status="PASS" starttime="20240629 23:49:58.294" endtime="20240629 23:49:58.364"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IMOVEL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:58.364" level="INFO">Clicking element '//div[@class='l-multiselect__input-label'][contains(.,'Todos os imóveis')]'.</msg>
+<status status="PASS" starttime="20240629 23:49:58.364" endtime="20240629 23:49:58.475"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${COBERTURA}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240629 23:49:58.475" endtime="20240629 23:49:58.792"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${COBERTURA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:49:58.793" level="INFO">Clicking element '//label[@data-testid='undefined-item-0-7'][contains(.,'Cobertura')]'.</msg>
+<status status="PASS" starttime="20240629 23:49:58.793" endtime="20240629 23:49:58.840"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240629 23:50:08.841" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240629 23:49:58.840" endtime="20240629 23:50:08.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUSCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240629 23:50:08.841" level="INFO">Clicking element '//button[@data-testid='l-button'][contains(.,'Buscar')]'.</msg>
+<status status="PASS" starttime="20240629 23:50:08.841" endtime="20240629 23:50:08.919"/>
+</kw>
+<status status="PASS" starttime="20240629 23:49:56.317" endtime="20240629 23:50:08.919"/>
+</kw>
+<kw name="Fechar o navegador" library="teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240629 23:50:08.920" endtime="20240629 23:50:11.710"/>
+</kw>
+<status status="PASS" starttime="20240629 23:50:08.920" endtime="20240629 23:50:11.710"/>
+</kw>
+<doc>Cenário de teste positivo: Busca por cobertura para alugar na cidade de São Paulo com campos preenchidos corretamente.</doc>
+<tag>CT01</tag>
+<status status="PASS" starttime="20240629 23:49:52.178" endtime="20240629 23:50:11.710"/>
+</test>
+<status status="PASS" starttime="20240629 23:49:51.934" endtime="20240629 23:50:11.711"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CT01</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Buscarimoveis">Buscarimoveis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
