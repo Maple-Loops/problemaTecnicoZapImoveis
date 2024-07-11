@@ -30,7 +30,7 @@ jobs:
       - name: Run Robot Framework tests
         run:
           ls ./tests
-          python -m robot -d ./tests/result --reporttitle "Buscar Imóveis" ./tests/buscarImoveis.robot
+          python -m robot -d ./tests/result ./tests/buscarImoveis.robot
 
       - name: Send email with logs
         run: |
