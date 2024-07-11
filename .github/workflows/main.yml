@@ -40,6 +40,3 @@ jobs:
           export DISPLAY=:99
           xvfb-run --server-args="-screen 0 1920x1080x24" python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot
 
-      - name: Send email with logs
-        run: |
-          python ./problemaTecnicoZapImoveis/tests/resources/shared/sendemail.py
