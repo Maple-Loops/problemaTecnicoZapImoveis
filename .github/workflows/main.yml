@@ -27,9 +27,12 @@ jobs:
           pip install robotframework
           pip install robotframework-seleniumlibrary
 
-      - name: Run Robot Framework tests
+      - name: List files in ./tests
         run:
           ls ./tests
+
+      - name: Run Robot Framework tests
+        run:
           python -m robot -d ./tests/result ./tests/buscarImoveis.robot
 
       - name: Send email with logs
