@@ -78,10 +78,13 @@ Este caso de teste verifica a funcionalidade de busca utilizando dados inválido
     
     Copiar código
     
-	python -m pip install --upgrade pip
+	'python -m pip install --upgrade pip
+
     pip install robotframework
+
     pip install robotframework-seleniumlibrary
-    pip install webdriver-manager
+
+    pip install webdriver-manager'
     
 
 ### Executando os Testes
