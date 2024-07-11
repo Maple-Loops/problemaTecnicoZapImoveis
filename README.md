@@ -8,20 +8,6 @@ Este repositório contém a automação de testes para a funcionalidade de busca
 
 O projeto está organizado da seguinte forma:
 
-arduino
-
-Copiar código
-
-`problemaTecnicoZapImoveis/
-│
-├── tests/
-│   ├── resources/
-│   │   ├── pages/
-│   │   │   ├── buscarImoveis.robot
-│   │   │   └── shared/
-│   │   │       ├── setup.robot
-│   │   │       └── teardown.robot
-│   └── buscaImoveis.robot` 
 
 ### Descrição dos Arquivos
 
