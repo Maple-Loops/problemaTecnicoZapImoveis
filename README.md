@@ -97,4 +97,5 @@ Copiar código
 
 `robot tests/buscaImoveis.robot` 
 
-Este comando executará todos os casos de teste definidos no arquivo `python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot`.
+Este comando executará todos os casos de teste definidos no arquivo 
+`python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot`.
