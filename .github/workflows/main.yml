@@ -28,6 +28,10 @@ jobs:
           pip install robotframework-seleniumlibrary
           pip install webdriver-manager
 
+      - name: Config Web Driver Manager
+        run: |
+          python ./problemaTecnicoZapImoveis/tests/resources/shared/webDriverManager.py
+
       - name: Run Robot Framework tests
         run:
           python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot
