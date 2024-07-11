@@ -31,7 +31,7 @@ jobs:
 
       - name: Setup ChromeDriver
         run: |
-          wget -q -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/LATEST_RELEASE/chromedriver_linux64.zip
+          wget -q -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.126/linux64/chrome-linux64.zip
           unzip -o /tmp/chromedriver.zip -d /tmp
           ls -l /tmp/chrome-linux64  # Verifica se o arquivo chromedriver está presente e listado corretamente
           sudo mv /tmp/chrome-linux64/chromedriver /usr/local/bin/chromedriver
