@@ -78,7 +78,10 @@ Este caso de teste verifica a funcionalidade de busca utilizando dados inválido
     
     Copiar código
     
-    `pip install -r requirements.txt` 
+    `python -m pip install --upgrade pip
+     pip install robotframework
+     pip install robotframework-seleniumlibrary
+     pip install webdriver-manager` 
     
 
 ### Executando os Testes
@@ -91,4 +94,4 @@ Copiar código
 
 `robot tests/buscaImoveis.robot` 
 
-Este comando executará todos os casos de teste definidos no arquivo `buscaImoveis.robot`.
+Este comando executará todos os casos de teste definidos no arquivo `python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot`.
