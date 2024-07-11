@@ -41,6 +41,6 @@ if __name__ == "__main__":
     toaddr = 'emailteste@teste.com'
     subject = "Resultados dos Testes Automatizados"
     body = "Encontre em anexo os resultados dos testes automatizados."
-    files = ["report/output.xml", "report/report.html", "report/log.html"]
+    files = ["problemaTecnicoZapImoveis/tests/result/output.xml", "problemaTecnicoZapImoveis/tests/result/report.html", "problemaTecnicoZapImoveis/tests/result/log.html"]
 
     send_email(smtp_server, smtp_port, smtp_user, smtp_password, fromaddr, toaddr, subject, body, files)
