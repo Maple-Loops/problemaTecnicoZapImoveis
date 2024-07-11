@@ -34,15 +34,10 @@ jobs:
           wget -q -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
           unzip -o /tmp/chromedriver.zip -d /tmp
 
-      - name: Run WebDriver Manager setup
+      - name: Set up xvfb and run tests
         run: |
-          python ./problemaTecnicoZapImoveis/tests/resources/shared/webDriverManager.py
-
-      - name: Run Robot Framework tests
-        run: |
-          python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot
-        env:
-          PATH: $PATH:/tmp
+          export DISPLAY=:99
+          xvfb-run --server-args="-screen 0 1920x1080x24" python -m robot -d ./problemaTecnicoZapImoveis/tests/result ./problemaTecnicoZapImoveis/tests/buscarImoveis.robot
 
       - name: Send email with logs
         run: |
