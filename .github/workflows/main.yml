@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Robot Framework tests
         run: |
-          python -m robot --argumentfile args.txt ..\problemaTecnicoZapImoveis\tests\buscarImoveis.robot
+          python -m robot -d ../problemaTecnicoZapImoveis/tests/result --logtitle Buscar Imóveis --reporttitle Buscar Imóveis ../problemaTecnicoZapImoveis/tests/buscarImoveis.robot
 
       - name: Send email with logs
         run: |

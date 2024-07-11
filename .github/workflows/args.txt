@@ -1,5 +1,0 @@
---logtitle Buscar Imóveis
---reporttitle Buscar Imóveis
---maxerrorlines 10
---loglevel DEBUG:INFO  
--d ../problemaTecnicoZapImoveis/tests/result
